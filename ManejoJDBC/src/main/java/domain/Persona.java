@@ -2,6 +2,7 @@
 package domain;
 
 public class Persona {
+
     private int idPersona;
     private String nombre;
     private String apellido;
@@ -9,8 +10,23 @@ public class Persona {
     private String telefono;
 
     public Persona() {
-        
     }
+
+    public Persona(String nombre, String apellido, String email, String telefono) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.telefono = telefono;
+    }
+
+    public Persona(int idPersona, String nombre, String apellido, String email, String telefono) {
+        this.idPersona = idPersona;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.telefono = telefono;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -42,10 +58,10 @@ public class Persona {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Persona{" + "idPersona=" + idPersona + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", telefono=" + telefono + '}';
     }
 
-
-
+}

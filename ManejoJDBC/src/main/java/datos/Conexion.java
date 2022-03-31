@@ -1,7 +1,6 @@
 
 package datos;
 
-import com.mysql.cj.util.DnsSrv;
 import java.sql.*;
 
 public class Conexion {
@@ -18,6 +17,10 @@ public class Conexion {
     }
     
     public static void close(Statement stmt) throws SQLException{
+        stmt.close();
+    }
+    
+    public static void close(PreparedStatement stmt) throws SQLException{
         stmt.close();
     }
     

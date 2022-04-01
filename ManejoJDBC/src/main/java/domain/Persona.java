@@ -1,4 +1,3 @@
-
 package domain;
 
 public class Persona {
@@ -25,6 +24,14 @@ public class Persona {
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
     }
 
     public String getNombre() {

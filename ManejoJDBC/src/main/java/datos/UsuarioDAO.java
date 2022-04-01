@@ -25,10 +25,10 @@ public class UsuarioDAO {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 int idUsuario = rs.getInt("id_usuario");
-                String usuariox = rs.getString("usuario");
+                String username = rs.getString("usuario");
                 String password = rs.getString("password");
 
-                usuario = new Usuario(idUsuario, usuariox, password);
+                usuario = new Usuario(idUsuario, username, password);
 
                 usuarios.add(usuario);
             }
@@ -53,7 +53,7 @@ public class UsuarioDAO {
         try {
             conn = getConnection();
             stmt = conn.prepareStatement(SQL_INSERT);
-            stmt.setString(1, usuario.getUsuario());
+            stmt.setString(1, usuario.getUsername());
             stmt.setString(2, usuario.getPassword());
 
             registros = stmt.executeUpdate();
@@ -77,7 +77,7 @@ public class UsuarioDAO {
         try {
             conn = getConnection();
             stmt = conn.prepareStatement(SQL_UPDATE);
-            stmt.setString(1, usuario.getUsuario());
+            stmt.setString(1, usuario.getUsername());
             stmt.setString(2, usuario.getPassword());
             stmt.setInt(5, usuario.getIdUsuario());
             registros = stmt.executeUpdate();

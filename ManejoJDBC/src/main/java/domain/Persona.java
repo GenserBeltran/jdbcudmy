@@ -12,6 +12,10 @@ public class Persona {
     public Persona() {
     }
 
+    public Persona(int idPersona) {
+        this.idPersona = idPersona;
+    }
+
     public Persona(String nombre, String apellido, String email, String telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -25,6 +29,14 @@ public class Persona {
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
     }
 
     public String getNombre() {

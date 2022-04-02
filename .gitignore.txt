@@ -1,1 +1,1 @@
-/ManejoJDBC/target/
+/ManejoJDBC_v2/target/
